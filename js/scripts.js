@@ -50,7 +50,7 @@ $(function() {
   //This calculates and shows the price on the page.
   totalPrice();
   });
-  
+
   //This function spits out the html for the order
   function orderOutput () {
     $('.order-output').show();

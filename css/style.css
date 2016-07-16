@@ -7,8 +7,10 @@ body {
                 rgba(0,0,0,0.55) url('../img/pizza.jpg') no-repeat center;
     background-size: cover;
     color: #fff;
-    text-rendering: optimizeLegibility;
+    margin: 0;
     padding: 7% 0 15% 0;
+    border-radius: 0;
+    border: none;
 }
 #orderForm, .order-output {
   display: none;
@@ -27,4 +29,7 @@ body {
 }
 .pay-now ul li i {
   font-size: 24px;
+}
+.card-block {
+  color: #4a4a4a;
 }
