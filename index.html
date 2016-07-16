@@ -12,7 +12,56 @@
       <div class="col-lg-8 col-lg-offset-2">
         <h1 class="display-4 p-t-2">Order Your Favorite Pizza Pie!</h1>
         <p>It's easy, just tell us what you want on your Pizza.</p>
-        <a class="btn btn-primary btn-lg p-b-2" href="#" role="button">Create your order</a>
+        <a id="createOrderBtn" class="btn btn-primary btn-lg m-b-2" href="#" role="button">Create your order</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-6">
+        <form id="orderForm" class="m-t-2">
+          <fieldset class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter Your Name">
+          </fieldset>
+
+          <fieldset class="form-group">
+            <label for="size">Pizza Size</label>
+            <select class="form-control" id="size">
+              <option>Small 12" - $14</option>
+              <option>Medium 16" - $18</option>
+              <option>Large 20" - $22</option>
+            </select>
+          </fieldset>
+
+          <div class="checkbox">
+            <label>
+              <input type="checkbox"> Pepporoni
+            </label>
+            <label>
+              <input type="checkbox"> Olives
+            </label>
+            <label>
+              <input type="checkbox"> Mushrooms
+            </label>
+            <label>
+              <input type="checkbox"> Peppers
+            </label>
+            <label>
+              <input type="checkbox"> Onions
+            </label>
+            <label>
+              <input type="checkbox"> Tomatoes
+            </label>
+          </div>
+
+          <fieldset class="form-group">
+            <label for="specialRequest">Special Order Request</label>
+            <textarea class="form-control" id="specialRequest" rows="3"></textarea>
+          </fieldset>
+          <button type="submit" class="btn btn-primary">Order Your Pizza</button>
+        </form>
       </div>
     </div>
   </div>
