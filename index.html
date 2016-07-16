@@ -28,31 +28,31 @@
 
           <fieldset class="form-group">
             <label for="size">Pizza Size</label>
-            <select class="form-control" id="size">
-              <option>Small 12" - $14</option>
-              <option>Medium 16" - $18</option>
-              <option>Large 20" - $22</option>
+            <select class="form-control" id="pizzaSize">
+              <option>Small</option>
+              <option>Medium</option>
+              <option>Large</option>
             </select>
           </fieldset>
 
-          <div class="checkbox">
+          <div id="pizzaToppings" class="checkbox">
             <label>
-              <input type="checkbox"> Pepporoni
+              <input type="checkbox" value="Pepporoni"> Pepporoni
             </label>
             <label>
-              <input type="checkbox"> Olives
+              <input type="checkbox" value="Olives"> Olives
             </label>
             <label>
-              <input type="checkbox"> Mushrooms
+              <input type="checkbox" value="Mushrooms"> Mushrooms
             </label>
             <label>
-              <input type="checkbox"> Peppers
+              <input type="checkbox" value="Peppers"> Peppers
             </label>
             <label>
-              <input type="checkbox"> Onions
+              <input type="checkbox" value="Onions"> Onions
             </label>
             <label>
-              <input type="checkbox"> Tomatoes
+              <input type="checkbox" value="Tomatoes"> Tomatoes
             </label>
           </div>
 
@@ -60,7 +60,7 @@
             <label for="specialRequest">Special Order Request</label>
             <textarea class="form-control" id="specialRequest" rows="3"></textarea>
           </fieldset>
-          <button type="submit" class="btn btn-primary">Order Your Pizza</button>
+          <button type="submit" id="orderSubmit" class="btn btn-primary">Order Your Pizza</button>
         </form>
       </div>
     </div>
