@@ -8,11 +8,13 @@ body {
     background-size: cover;
     color: #fff;
     text-rendering: optimizeLegibility;
-    max-height: 400px;
-    padding: 5rem 0;
+    padding: 7% 0 15% 0;
 }
 #orderForm, .order-output {
   display: none;
+}
+#orderForm {
+  margin: 3rem 0;
 }
 .pay-now button {
   float: right;
