@@ -24,16 +24,13 @@ Pizza.prototype.price = function() {
   };
   return pizzaPrice.toFixed(2);
 }
-
 //Front end, user logic
-
-
 $(function() {
   //Show order form
   $('#createOrderBtn').click(function() {
     $('form#orderForm').fadeIn('slow').show();
  });
-  //This empty array allows us to pass a bunch of orders in here.
+  //This empty array allows us to pass a bunch of orders in here, but this feature isn't built out yet.
   order = [];
   //On the order button being clicked, this function grabs all the values that were given by the user.
   $('#orderSubmit').click(function(event) {
@@ -47,17 +44,19 @@ $(function() {
 
   //Let's try and pass all values into a new object with a constructor
   order[0] = new Pizza(pizzaName, pizzaSize, pizzaToppings);
+
   //This shows the order on the page
   orderOutput();
   //This calculates and shows the price on the page.
   totalPrice();
   });
+  
   //This function spits out the html for the order
   function orderOutput () {
     $('.order-output').show();
     $('.name').text('Name on order ' + pizzaName);
     $('.pizza-size').text('You ordered a ' + pizzaSize);
-    $('.pizza-toppings').text('Your toppings include ' + pizzaToppings);
+    $('.pizza-toppings').text('Your toppings include ' + pizzaToppings + ' ');
     if (specialRequest !== '') {
       $('.special-request').text('Your request is: ' + specialRequest);
     } else {
