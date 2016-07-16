@@ -1,3 +1,9 @@
+//Global variables
+pizzaName = '';
+pizzaSize = '';
+pizzaToppings = [];
+specialRequest = '';
+
 //Create Pizza Order Object
 function Pizza() {};
 //Creating the order constructor
@@ -16,13 +22,8 @@ Pizza.prototype.price = function() {
   } else {
     pizzaPrice = (22 + (.25 * pizzaToppingsPrice))
   };
-  console.log("The price for this pizza is " + pizzaPrice);
+  return pizzaPrice.toFixed(2);
 }
-//Global variables
-pizzaName = '';
-pizzaSize = '';
-pizzaToppings = [];
-specialRequest = '';
 
 //Front end, user logic
 
@@ -46,6 +47,7 @@ $(function() {
   //Let's try and pass all values into a new object with a constructor
   order[0] = new Pizza(pizzaName, pizzaSize, pizzaToppings);
   orderOutput();
+  totalPrice();
   });
   function orderOutput () {
     $('.order-output').show();
@@ -59,7 +61,7 @@ $(function() {
     };
   } //End of orderOutput function
   function totalPrice () {
-
+    $('.total-price').text('Your total is $' + order[0].price());
   }
 
 });

@@ -14,3 +14,15 @@ body {
 #orderForm, .order-output {
   display: none;
 }
+.pay-now button {
+  float: right;
+  margin: -7px;
+}
+.pay-now ul {
+  display: block;
+  float: right;
+  margin-right: 10px;
+}
+.pay-now ul li i {
+  font-size: 24px;
+}

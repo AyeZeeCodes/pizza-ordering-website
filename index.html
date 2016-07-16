@@ -3,6 +3,7 @@
 <head>
 <title>Pizza Ordering Service</title>
 <link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/payment-icons.css">
 <link rel="stylesheet" href="css/style.css">
 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 </head>
@@ -72,8 +73,17 @@
             <li class="list-group-item pizza-toppings"></li>
             <li class="list-group-item special-request"></li>
           </ul>
-          <hr />
-          <p class="total-price"></p>
+          <div class="pay-now well alert alert-success">
+            <span class="total-price lead"></span>
+            <button type="button" class="btn btn-primary pull-right">Pay Now</button>
+            <ul class="list-inline">
+              <li class="list-inline-item"><i class="pw pw-mastercard"></i></li>
+              <li class="list-inline-item"><i class="pw pw-visa"></i></li>
+              <li class="list-inline-item"><i class="pw pw-american-express"></i></li>
+              <li class="list-inline-item"><i class="pw pw-square"></i></li>
+            </ul>
+
+          </div>
         </div>
       </div>
     </div> <!-- /.row -->
