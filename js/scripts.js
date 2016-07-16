@@ -48,15 +48,18 @@ $(function() {
   orderOutput();
   });
   function orderOutput () {
-    $('.orderOutput').show();
+    $('.order-output').show();
     $('.name').text('Name on order ' + pizzaName);
-    $('.pizzaSize').text('You ordered a ' + pizzaSize);
-    $('.pizzaToppings').text('Your toppings include ' + pizzaToppings);
+    $('.pizza-size').text('You ordered a ' + pizzaSize);
+    $('.pizza-toppings').text('Your toppings include ' + pizzaToppings);
     if (specialRequest !== '') {
-      $('.specialRequest').text('Your request is: ' + specialRequest);
+      $('.special-request').text('Your request is: ' + specialRequest);
     } else {
-      $('.specialRequest').css('display', 'none');
+      $('.special-request').css('display', 'none');
     };
+  } //End of orderOutput function
+  function totalPrice () {
+
   }
 
 });

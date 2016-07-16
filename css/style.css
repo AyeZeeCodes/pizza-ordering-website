@@ -11,6 +11,6 @@ body {
     max-height: 400px;
     padding: 5rem 0;
 }
-#orderForm, .orderOutput {
+#orderForm, .order-output {
   display: none;
 }
