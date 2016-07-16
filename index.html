@@ -4,15 +4,15 @@
 <title>Pizza Ordering Service</title>
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/style.css">
-
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 </head>
 <body>
   <div class="jumbotron">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2">
-        <h1 class="display-4 p-t-2">Order Your Favorite Pizza Pie!</h1>
+        <h1 class="display-4">Order Your Favorite Pizza Pie!</h1>
         <p>It's easy, just tell us what you want on your Pizza.</p>
-        <a id="createOrderBtn" class="btn btn-primary btn-lg m-b-2" href="#" role="button">Create your order</a>
+        <a id="createOrderBtn" class="btn btn-primary btn-lg" href="#" role="button">Create your order</a>
       </div>
     </div>
   </div>
@@ -29,13 +29,14 @@
           <fieldset class="form-group">
             <label for="size">Pizza Size</label>
             <select class="form-control" id="pizzaSize">
-              <option>Small</option>
-              <option>Medium</option>
-              <option>Large</option>
+              <option value="Small">Small 12" - $14</option>
+              <option value="Medium">Medium 14" - $18</option>
+              <option value="Large">Large 20" - $22</option>
             </select>
           </fieldset>
 
           <div id="pizzaToppings" class="checkbox">
+            <p class="alert alert-danger">Each topping costs $0.25</p>
             <label>
               <input type="checkbox" value="Pepporoni"> Pepporoni
             </label>
@@ -55,7 +56,6 @@
               <input type="checkbox" value="Tomatoes"> Tomatoes
             </label>
           </div>
-
           <fieldset class="form-group">
             <label for="specialRequest">Special Order Request</label>
             <textarea class="form-control" id="specialRequest" rows="3"></textarea>
@@ -63,9 +63,19 @@
           <button type="submit" id="orderSubmit" class="btn btn-primary">Order Your Pizza</button>
         </form>
       </div>
-    </div>
-  </div>
-
+      <div class="col-sm-12 col-lg-6">
+        <div class="orderOutput">
+          <h3 class="p-t-2">Your order details are below:</h3>
+          <ul class="list-group">
+            <li class="list-group-item name active"></li>
+            <li class="list-group-item pizzaSize"></li>
+            <li class="list-group-item pizzaToppings"></li>
+            <li class="list-group-item specialRequest"></li>
+          </ul>
+        </div>
+      </div>
+    </div> <!-- /.row -->
+  </div> <!-- /.container -->
   <script src="js/jquery-3.1.0.min.js"></script>
   <script src="js/scripts.js"></script>
 </body>

@@ -8,22 +8,30 @@ function Pizza(pizzaName, pizzaSize, pizzaToppings) {
 };
 //Pizza Price Prototype
 Pizza.prototype.price = function() {
+  pizzaToppingsPrice = pizzaToppings.length
   if (pizzaSize === 'Small') {
-    pizzaPrice = '$14'
+    pizzaPrice = (14 + (.25 * pizzaToppingsPrice))
   } else if (pizzaSize === 'Medium') {
-    pizzaPrice = '$18'
+    pizzaPrice = (18 + (.25 * pizzaToppingsPrice))
   } else {
-    pizzaPrice = '$22'
+    pizzaPrice = (22 + (.25 * pizzaToppingsPrice))
   };
   console.log("The price for this pizza is " + pizzaPrice);
 }
+//Global variables
+pizzaName = '';
+pizzaSize = '';
+pizzaToppings = [];
+specialRequest = '';
 
 //Front end, user logic
+
+
 $(function() {
   //Show order form
-//  $('#createOrderBtn').click(function() {
-//    $('form#orderForm').fadeIn('slow').show();
-//  });
+  $('#createOrderBtn').click(function() {
+    $('form#orderForm').fadeIn('slow').show();
+ });
   //This empty array allows us to pass a bunch of orders in here.
   order = [];
   $('#orderSubmit').click(function(event) {
@@ -33,7 +41,22 @@ $(function() {
   pizzaToppings = $("input:checkbox:checked").map(function(){
       return $(this).val();
     }).get(); //per the docs this turns the jQuery object into a true array. Not sure this is needed.
+  specialRequest = $("#specialRequest").val();
+
   //Let's try and pass all values into a new object with a constructor
   order[0] = new Pizza(pizzaName, pizzaSize, pizzaToppings);
+  orderOutput();
   });
+  function orderOutput () {
+    $('.orderOutput').show();
+    $('.name').text('Name on order ' + pizzaName);
+    $('.pizzaSize').text('You ordered a ' + pizzaSize);
+    $('.pizzaToppings').text('Your toppings include ' + pizzaToppings);
+    if (specialRequest !== '') {
+      $('.specialRequest').text('Your request is: ' + specialRequest);
+    } else {
+      $('.specialRequest').css('display', 'none');
+    };
+  }
+
 });

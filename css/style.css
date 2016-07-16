@@ -1,13 +1,16 @@
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
 .jumbotron {
     background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
                 rgba(0,0,0,0.55) url('../img/pizza.jpg') no-repeat center;
     background-size: cover;
     color: #fff;
     text-rendering: optimizeLegibility;
-    margin: 0;
     max-height: 400px;
+    padding: 5rem 0;
 }
-
-/* #orderForm {
+#orderForm, .orderOutput {
   display: none;
-} */
+}
