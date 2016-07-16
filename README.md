@@ -1,6 +1,6 @@
 #Pizza ordering Website
 ###Description
-This is a simple website interface that lets you order a pizza. The goal of this site is to practice using objects, constructors, and prototypes. View the project [Pizza Project](https://ayezeecodes.github.io/pizza-ordering-website") here.
+This is a simple website interface that lets you order a pizza. The goal of this site is to practice using objects, constructors, and prototypes. View the [pizza project](https://ayezeecodes.github.io/pizza-ordering-website) here.
 
 ###Project requirements
 * Allow the user to choose toppings and size for the pizza they'd like to order.
